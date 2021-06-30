@@ -1,11 +1,15 @@
-/* Reset properties */
+/**
+* Reset default properties
+*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Color variables */
+/**
+* Color variables
+*/
 :root {
   --cyan-light-100: #00e1be;
   --cyan-light-150: #0ceabf;
@@ -32,7 +36,10 @@
   --white: #ffffff;
 }
 
-/* Global settings: read more at README (##CSS section) */
+/**
+* Global settings
+*  - Note: read more at README (CSS section).
+*/
 html {
   font-size: 62.5%;
 }
@@ -43,7 +50,7 @@ body {
   width: 100vw;
   height: 100vh;
 
-  background: var(--gray-light-200);
+  background: var(--cyan-dark-100);
   color: var(--white);
 }
 
@@ -65,6 +72,17 @@ textarea {
   font: 300 1.6rem 'Oswald', sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  font-family: 'Oswald', sans-serif;
+}
+
 button {
   cursor: pointer;
 }
@@ -73,3 +91,99 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+/**
+* Customizations - Mobile First
+*/
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.block {
+  width: 100%;
+}
+
+.block__dark100 {
+  background-color: var(--cyan-dark-100);
+}
+
+.block__dark700 {
+  background-color: var(--cyan-dark-700);
+}
+
+.block__light600 {
+  background-color: var(--cyan-light-600);
+}
+
+.content {
+  padding: 1rem 0;
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+/* Section: Introduction */
+#introduction {
+  padding-top: 0; /* sobrescreve padding-top padrão de conteúdo porque a imagem possui espaçamento no topo */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#introduction img {
+  max-width: 20rem;
+  object-fit: cover;
+}
+
+#introduction div.background {
+  height: 3rem;
+  width: 100vw;
+  background-color: var(--cyan-light-500);
+  margin-bottom: -4rem;
+}
+
+#introduction .description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#introduction .description h2 {
+  letter-spacing: 0.8rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+#introduction .description img {
+  max-width: 15rem;
+}
+
+#introduction .description p {
+  text-align: center;
+}
+
+#introduction .description p strong {
+  color: var(--cyan-light-100);
+  font-weight: 400;
+}
+
+#introduction .description button {
+  color: var(--cyan-dark-300);
+  font-weight: 500;
+  background-color: var(--cyan-light-100);
+  border: 0;
+  border-radius: 0.8rem;
+  text-decoration: none;
+  padding: 0.2rem 2rem;
+}
+
+/**
+* Desktop adaptations
+*/
