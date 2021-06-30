@@ -1,0 +1,75 @@
+/* Reset properties */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Color variables */
+:root {
+  --cyan-light-100: #00e1be;
+  --cyan-light-150: #0ceabf;
+  --cyan-light-200: #03f4c6;
+  --cyan-light-250: #0aefc3;
+  --cyan-light-300: #11edc2;
+  --cyan-light-400: #07eabf;
+  --cyan-light-500: #00aa89;
+  --cyan-light-600: #036060;
+  --cyan-dark-100: #001e1f;
+  --cyan-dark-200: #011c1c;
+  --cyan-dark-300: #090c0b;
+  --cyan-dark-400: #1a1a1a;
+  --cyan-dark-500: #00211b;
+  --cyan-dark-600: #000000;
+  --cyan-dark-700: #011913;
+  --gray-dark-300: #7a7a7a;
+  --gray-dark-400: #474747;
+  --gray-light-100: #f7f2f2;
+  --gray-light-150: #fcf7f7;
+  --gray-light-200: #e0e0e0;
+  --gray-light-300: #f9f9f9;
+  --gray-light-400: #fcfcfc;
+  --white: #ffffff;
+}
+
+/* Global settings: read more at README (##CSS section) */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+
+  width: 100vw;
+  height: 100vh;
+
+  background: var(--gray-light-200);
+  color: var(--white);
+}
+
+@media (max-width: 1080px) {
+  body {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 720px) {
+  body {
+    font-size: 1.4rem;
+  }
+}
+
+input,
+button,
+textarea {
+  font: 300 1.6rem 'Oswald', sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
