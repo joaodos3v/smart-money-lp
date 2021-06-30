@@ -136,6 +136,16 @@ main {
   gap: 1rem;
 }
 
+.button-subscribe {
+  color: var(--cyan-dark-300);
+  font-weight: 500;
+  background-color: var(--cyan-light-100);
+  border: 0;
+  border-radius: 0.8rem;
+  text-decoration: none;
+  padding: 0.2rem 2rem;
+}
+
 /* Section: Introduction */
 #introduction {
   padding-top: 0; /* TODO: [1] sobrescreve padding-top padrão de conteúdo porque a imagem possui espaçamento no topo */
@@ -173,16 +183,6 @@ main {
 
 #introduction .description p {
   text-align: center;
-}
-
-#introduction .description button {
-  color: var(--cyan-dark-300);
-  font-weight: 500;
-  background-color: var(--cyan-light-100);
-  border: 0;
-  border-radius: 0.8rem;
-  text-decoration: none;
-  padding: 0.2rem 2rem;
 }
 
 /* Section: Scenarios */
@@ -233,6 +233,20 @@ main {
 
 #freedom p strong {
   color: var(--cyan-dark-100);
+}
+
+/* Section: Truth */
+#truth h4 {
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 0.15rem;
+  color: var(--cyan-light-100);
+}
+
+#truth p {
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 0.01rem;
 }
 
 /**
