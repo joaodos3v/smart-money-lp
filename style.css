@@ -79,7 +79,8 @@ h4,
 h5,
 h6,
 p,
-span {
+span,
+li {
   font-family: 'Oswald', sans-serif;
 }
 
@@ -90,6 +91,11 @@ button {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+strong {
+  color: var(--cyan-light-100);
+  font-weight: 400;
 }
 
 /**
@@ -119,20 +125,20 @@ main {
 }
 
 .content {
-  padding: 1rem 0;
+  padding: 2rem 0;
   max-width: 30rem;
   margin: 0 auto;
-}
-
-/* Section: Introduction */
-#introduction {
-  padding-top: 0; /* sobrescreve padding-top padrão de conteúdo porque a imagem possui espaçamento no topo */
 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 1rem;
+}
+
+/* Section: Introduction */
+#introduction {
+  padding-top: 0; /* TODO: [1] sobrescreve padding-top padrão de conteúdo porque a imagem possui espaçamento no topo */
 }
 
 #introduction img {
@@ -169,11 +175,6 @@ main {
   text-align: center;
 }
 
-#introduction .description p strong {
-  color: var(--cyan-light-100);
-  font-weight: 400;
-}
-
 #introduction .description button {
   color: var(--cyan-dark-300);
   font-weight: 500;
@@ -182,6 +183,45 @@ main {
   border-radius: 0.8rem;
   text-decoration: none;
   padding: 0.2rem 2rem;
+}
+
+/* Section: Scenarios */
+#scenarios p {
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 0.15rem;
+}
+
+#scenarios h3 {
+  margin: 1.5rem 0;
+  padding: 0.5rem;
+
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 0.15rem;
+  color: var(--cyan-dark-100);
+  background-color: var(--cyan-light-100);
+}
+
+#scenarios ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  text-align: center;
+}
+
+#scenarios ul li:before {
+  /* TODO: [2] ref https://www.w3schools.com/howto/howto_css_bullet_color.asp */
+  content: '\2022';
+  padding-left: 1rem;
+  text-indent: -1rem;
+  color: var(--cyan-light-100);
+  display: inline-block;
+}
+
+#scenarios ul li + li {
+  /* TODO: [3] */
+  margin-top: 0.5rem;
 }
 
 /**
