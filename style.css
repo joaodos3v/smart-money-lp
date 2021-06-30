@@ -224,6 +224,17 @@ main {
   margin-top: 0.5rem;
 }
 
+/* Section: Freedom */
+#freedom p {
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 0.15rem;
+}
+
+#freedom p strong {
+  color: var(--cyan-dark-100);
+}
+
 /**
 * Desktop adaptations
 */
