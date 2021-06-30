@@ -126,7 +126,7 @@ main {
 
 .content {
   padding: 2rem 0;
-  max-width: 30rem;
+  max-width: 25rem;
   margin: 0 auto;
 
   display: flex;
@@ -227,3 +227,8 @@ main {
 /**
 * Desktop adaptations
 */
+@media (min-width: 420px) {
+  .content {
+    max-width: 30rem;
+  }
+}
