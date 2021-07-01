@@ -120,6 +120,10 @@ main {
   background-color: var(--cyan-dark-700);
 }
 
+.block__light200 {
+  background-color: var(--gray-light-200);
+}
+
 .block__light600 {
   background-color: var(--cyan-light-600);
 }
@@ -348,6 +352,86 @@ main {
   display: block;
 }
 
+/* Section: Program */
+#program h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--cyan-dark-100);
+}
+
+#program .program__details {
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 8rem 1fr 8rem;
+  grid-template-areas:
+    'training time canva'
+    'book time community';
+}
+
+#program .program__details .program__fractionDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+#program .program__details .program__fractionDetails h5 {
+  color: var(--cyan-dark-200);
+  font-size: 1.5rem;
+}
+
+#program .program__details .program__fractionDetails h3 {
+  color: var(--cyan-light-500);
+  font-size: 2.5rem;
+}
+
+#program .program__details .program__fractionDetails p {
+  color: var(--cyan-dark-500);
+  display: none;
+}
+
+#program .program__details .training {
+  grid-area: training;
+  background: linear-gradient(var(--cyan-light-500), var(--cyan-light-500)) top right / 30% 0.2rem;
+  background-repeat: no-repeat;
+}
+
+#program .program__details .time {
+  height: 100%;
+  grid-area: time;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(var(--cyan-light-500), var(--cyan-light-500)) top right / 0.2rem 40%,
+    linear-gradient(var(--cyan-light-500), var(--cyan-light-500)) bottom right / 0.2rem 40%,
+    linear-gradient(var(--cyan-light-500), var(--cyan-light-500)) top left / 0.2rem 40%,
+    linear-gradient(var(--cyan-light-500), var(--cyan-light-500)) bottom left / 0.2rem 40%;
+  background-repeat: no-repeat;
+}
+
+#program .program__details .canva {
+  grid-area: canva;
+  background: linear-gradient(var(--cyan-light-500), var(--cyan-light-500)) top left / 30% 0.2rem;
+  background-repeat: no-repeat;
+}
+
+#program .program__details .book {
+  grid-area: book;
+  margin-top: 2rem;
+  background: linear-gradient(var(--cyan-light-500), var(--cyan-light-500)) bottom right / 30%
+    0.2rem;
+  background-repeat: no-repeat;
+}
+
+#program .program__details .community {
+  grid-area: community;
+  margin-top: 2rem;
+  background: linear-gradient(var(--cyan-light-500), var(--cyan-light-500)) bottom left / 30% 0.2rem;
+  background-repeat: no-repeat;
+}
+
 /**
 * Desktop adaptations
 */
@@ -355,20 +439,63 @@ main {
   .content {
     max-width: 30rem;
   }
+
+  #program .program__details {
+    grid-template-columns: 8.5rem 1fr 8.5rem;
+    width: 100%;
+  }
+
+  #program .program__details .program__fractionDetails {
+    padding: 0.5rem;
+  }
 }
 
 @media (min-width: 720px) {
   .content {
     max-width: 60rem;
   }
+
+  #program .program__details {
+    grid-template-columns: 18rem 1fr 18rem;
+  }
+
+  #program .program__details .program__fractionDetails {
+    align-items: flex-start;
+    padding: 1.5rem;
+  }
+
+  #program .program__details .program__fractionDetails p {
+    display: block;
+  }
 }
 
 @media (min-width: 1080px) {
   .content {
-    max-width: 80rem;
+    max-width: 100rem;
   }
 
   /* TODO: learn__title [display flex, space-between] */
   /* TODO: #learn .learn__title h3 { text-align: left; */
   /* TODO: #learn .learn__items { direction: row */
+
+  #program .program__details {
+    grid-template-columns: 25rem 1fr 25rem;
+    width: 85%;
+  }
+
+  #program .program__details .program__fractionDetails {
+    padding: 3rem;
+  }
+
+  #program .program__details .time {
+    padding: 4rem;
+  }
+
+  #program .program__details .time h5 {
+    font-size: 2rem;
+  }
+
+  #program .program__details .time h3 {
+    font-size: 4rem;
+  }
 }
