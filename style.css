@@ -249,6 +249,103 @@ main {
   letter-spacing: 0.01rem;
 }
 
+/* Section: Learn */
+#learn .learn__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#learn .learn__title h4 {
+  color: var(--white);
+  text-align: center;
+  letter-spacing: 0.5rem;
+  font-weight: 300;
+}
+
+#learn .learn__title h4 img {
+  display: block;
+  max-width: 10rem;
+}
+
+#learn .learn__title h3 {
+  text-align: left;
+  color: var(--cyan-light-100);
+  font-weight: 400;
+}
+
+#learn .learn__title h3 em {
+  display: table;
+  font-style: normal;
+  color: var(--cyan-dark-100);
+  background-color: var(--cyan-light-100);
+  margin-bottom: 0.2rem;
+  padding: 0.2rem;
+}
+
+#learn .learn__title h3 span {
+  color: var(--white);
+}
+
+#learn .learn__items {
+  margin-top: 3.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+#learn .learn__items p {
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+
+#learn .learn__items p + p {
+  border-top: 0.1rem solid var(--cyan-light-100);
+  padding-top: 1.5rem;
+}
+
+#learn h4 {
+  font-size: 2rem;
+  margin: 5rem 0 3rem;
+}
+
+#learn .learn__mentors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+#learn .learn__mentors div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#learn .learn__mentors div img {
+  border-radius: 50%;
+  height: 10rem;
+  width: 10rem;
+  background-position: center center;
+  background-size: cover;
+}
+
+#learn .learn__mentors div h5 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+#learn .learn__mentors div h5 strong {
+  display: block;
+}
+
 /**
 * Desktop adaptations
 */
@@ -256,4 +353,20 @@ main {
   .content {
     max-width: 30rem;
   }
+}
+
+@media (min-width: 720px) {
+  .content {
+    max-width: 60rem;
+  }
+}
+
+@media (min-width: 1080px) {
+  .content {
+    max-width: 80rem;
+  }
+
+  /* TODO: learn__title [display flex, space-between] */
+  /* TODO: #learn .learn__title h3 { text-align: left; */
+  /* TODO: #learn .learn__items { direction: row */
 }
