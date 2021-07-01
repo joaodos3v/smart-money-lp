@@ -232,7 +232,9 @@ main {
 }
 
 #freedom p strong {
-  color: var(--cyan-dark-100);
+  /* TODO [4] */
+  color: var(--gray-light-200);
+  text-decoration: underline;
 }
 
 /* Section: Truth */
