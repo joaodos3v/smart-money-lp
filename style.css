@@ -540,6 +540,70 @@ main {
   bottom: -1.5rem;
 }
 
+/* Section: Guarantee */
+#guarantee {
+  position: relative;
+}
+
+#guarantee h5 {
+  margin-top: 2rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+#guarantee p {
+  font-weight: 300;
+  text-align: center;
+  color: var(--white);
+  padding-bottom: 5rem;
+}
+
+#guarantee img {
+  position: absolute;
+  margin: auto;
+  bottom: -5rem;
+  border-radius: 50%;
+  height: 10rem;
+  width: 10rem;
+  background-position: center center;
+  background-size: cover;
+}
+
+/* Section: Owner */
+#owner .owner__title {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#owner .owner__title h3 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: var(--cyan-light-600);
+}
+
+#owner .owner__title h4 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--cyan-dark-400);
+}
+
+#owner h5 {
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--black);
+  font-weight: normal;
+}
+
+#owner p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--gray-dark-400);
+  padding-bottom: 2rem;
+}
+
 /**
 * Desktop adaptations
 */
@@ -616,6 +680,21 @@ main {
 
   #bonus .bonus__items .bonus__item p {
     text-align: justify;
+  }
+
+  /* Section: Owner */
+  #owner .owner__title {
+    flex-direction: row;
+  }
+
+  #owner .owner__title h3 {
+    flex: 1;
+    flex-basis: 50%;
+  }
+
+  #owner .owner__title h4 {
+    flex: 1;
+    flex-basis: 50%;
   }
 }
 
