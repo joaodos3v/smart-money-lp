@@ -24,15 +24,16 @@
   --cyan-dark-300: #090c0b;
   --cyan-dark-400: #1a1a1a;
   --cyan-dark-500: #00211b;
-  --cyan-dark-600: #000000;
   --cyan-dark-700: #011913;
   --gray-dark-300: #7a7a7a;
   --gray-dark-400: #474747;
+  --gray-dark-500: #636363;
   --gray-light-100: #f7f2f2;
   --gray-light-150: #fcf7f7;
   --gray-light-200: #e0e0e0;
   --gray-light-300: #f9f9f9;
   --gray-light-400: #fcfcfc;
+  --black: #000000;
   --white: #ffffff;
 }
 
@@ -469,6 +470,74 @@ main {
   text-align: left;
   font-size: 1.5rem;
   margin-top: 0.5rem;
+}
+
+/* Section: Price */
+#price {
+  position: relative;
+}
+
+#price h3 {
+  text-align: center;
+  color: var(--cyan-dark-100);
+  font-size: 2.5rem;
+  padding: 0 0.3rem 1.5rem;
+  border-bottom: 0.2rem solid var(--cyan-dark-100);
+}
+
+#price h4 {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: var(--black);
+  font-size: 1.5rem;
+}
+
+#price h5 {
+  text-align: center;
+  color: var(--black);
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+#price p.total {
+  font-size: 5rem;
+  color: var(--cyan-dark-100);
+  letter-spacing: 0.1rem;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  align-items: baseline;
+  margin: -1.5rem;
+}
+
+#price p.total sup {
+  align-self: flex-start;
+  font-size: 2.5rem;
+  margin-top: 1.5rem;
+}
+
+#price p.total sub {
+  font-size: 1.5rem;
+}
+
+#price p.money {
+  font-size: 1.8rem;
+  color: var(--cyan-dark-100);
+  letter-spacing: 0.2rem;
+  text-align: center;
+}
+
+#price p.money em {
+  color: var(--gray-dark-500);
+  font-style: normal;
+  text-decoration: line-through;
+}
+
+#price button.button-subscribe {
+  position: absolute;
+  margin: auto;
+  bottom: -1.5rem;
 }
 
 /**
