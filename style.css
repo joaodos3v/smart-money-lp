@@ -89,11 +89,6 @@ button {
   cursor: pointer;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 strong {
   color: var(--cyan-light-100);
   font-weight: 400;
@@ -252,7 +247,7 @@ main {
 /* Section: Truth */
 #truth h4 {
   text-align: center;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.15rem;
   color: var(--cyan-light-100);
 }
@@ -322,7 +317,7 @@ main {
   padding-top: 1.5rem;
 }
 
-#learn h4 {
+#learn > h4 {
   font-size: 2rem;
   margin: 5rem 0 3rem;
 }
@@ -623,9 +618,22 @@ main {
   }
 }
 
+@media (min-width: 530px) {
+  .content {
+    max-width: 40rem;
+  }
+}
+
 @media (min-width: 720px) {
   .content {
     max-width: 60rem;
+  }
+
+  .button-subscribe {
+    font-weight: 600;
+    font-size: 1.8rem;
+    border-radius: 1rem;
+    padding: 0.5rem 3rem;
   }
 
   /* Section: Program */
@@ -644,7 +652,7 @@ main {
 
   /* Section: Bonus */
   #bonus h2 {
-    font-size: 8rem;
+    font-size: 5rem;
     letter-spacing: 0.1rem;
   }
 
@@ -682,32 +690,174 @@ main {
     text-align: justify;
   }
 
+  /* Section: Price */
+  #price {
+    padding-bottom: 3rem;
+  }
+
+  #price button.button-subscribe {
+    bottom: -2rem;
+  }
+
   /* Section: Owner */
   #owner .owner__title {
     flex-direction: row;
+    gap: 1rem;
   }
 
   #owner .owner__title h3 {
     flex: 1;
     flex-basis: 50%;
+    text-align: right;
+    font-size: 5.5rem;
   }
 
   #owner .owner__title h4 {
     flex: 1;
     flex-basis: 50%;
+    text-align: left;
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 3rem;
+  }
+
+  #owner h5 {
+    font-weight: 600;
   }
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 960px) {
   .content {
     max-width: 100rem;
   }
 
-  /* TODO: learn__title [display flex, space-between] */
-  /* TODO: #learn .learn__title h3 { text-align: left; */
-  /* TODO: #learn .learn__items { direction: row */
+  .button-subscribe {
+    font-size: 2.4rem;
+  }
+
+  /* Section: Introduction */
+  #introduction {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #introduction img {
+    max-width: 40rem;
+    order: 3;
+    flex-basis: 50%;
+    z-index: 1;
+  }
+
+  #introduction div.background {
+    height: 5rem;
+    order: 1;
+    flex-basis: 100%;
+    position: absolute;
+    top: 12.5rem;
+    margin-bottom: 0;
+  }
+
+  #introduction .description {
+    order: 2;
+    flex-basis: 50%;
+    z-index: 1;
+  }
+
+  #introduction .description h2 {
+    font-size: 4.5rem;
+    order: 1;
+  }
+
+  #introduction .description img {
+    max-width: 25rem;
+    order: 2;
+  }
+
+  #introduction .description p {
+    text-align: left;
+    order: 3;
+    max-width: 25rem;
+  }
+
+  #introduction .description button {
+    order: 4;
+    width: 50%;
+  }
+
+  /* Section: Scenarios */
+  #scenarios p {
+    font-size: 2rem;
+  }
+
+  #scenarios h3 {
+    font-size: 2rem;
+  }
+
+  #scenarios ul li {
+    font-size: 1.6rem;
+  }
+
+  /* Section: Freedom */
+  #freedom p {
+    font-size: 2rem;
+  }
+
+  /* Section: Truth */
+  #truth h4 {
+    font-size: 2.4rem;
+  }
+
+  #truth p {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    max-width: 45%;
+  }
+
+  /* Section: Learn */
+  #learn .learn__title {
+    gap: 3rem;
+  }
+
+  #learn .learn__title h3 {
+    font-size: 2.2rem;
+  }
+
+  #learn .learn__title h4 {
+    font-size: 2.8rem;
+  }
+
+  #learn .learn__title h4 img {
+    max-width: 15rem;
+  }
+
+  #learn .learn__items {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  #learn .learn__items p {
+    max-width: 20%;
+    text-align: left;
+    padding: 1rem;
+    font-size: 1.6rem;
+  }
+
+  #learn .learn__items p + p {
+    border-top: none;
+    border-left: 0.1rem solid var(--cyan-light-100);
+    padding: 1rem;
+  }
+
+  #learn > h4 {
+    font-size: 3rem;
+  }
 
   /* Section: Program */
+  #program h2 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+  }
+
   #program .program__details {
     grid-template-columns: 25rem 1fr 25rem;
     width: 85%;
@@ -727,5 +877,58 @@ main {
 
   #program .program__details .time h3 {
     font-size: 4rem;
+  }
+
+  /* Section: Bonus */
+  #bonus h2 {
+    font-size: 7rem;
+    margin-bottom: 2rem;
+  }
+
+  /* Section: Price */
+  #price {
+    padding-bottom: 5rem;
+  }
+
+  #price h3 {
+    font-size: 3.5rem;
+  }
+
+  #price h4 {
+    font-size: 2rem;
+  }
+
+  #price h5 {
+    font-size: 1.6rem;
+    max-width: 45%;
+    margin-top: -1rem;
+  }
+
+  #price p.total {
+    font-size: 6.5rem;
+  }
+
+  #price p.money {
+    font-size: 2.2rem;
+  }
+
+  /* Section: Guarantee */
+  #guarantee h5 {
+    font-size: 2.5rem;
+  }
+
+  #guarantee p {
+    font-size: 1.6rem;
+  }
+
+  /* Section: Owner */
+  #owner .owner__title h4 {
+    font-size: 3rem;
+    max-width: 40rem;
+  }
+
+  #owner h5,
+  p {
+    max-width: 64%;
   }
 }
