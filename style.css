@@ -156,7 +156,7 @@ main {
 
 /* Section: Introduction */
 #introduction {
-  padding-top: 0; /* TODO: [1] sobrescreve padding-top padrão de conteúdo porque a imagem possui espaçamento no topo */
+  padding-top: 0;
 }
 
 #introduction img {
@@ -219,7 +219,6 @@ main {
 }
 
 #scenarios ul li:before {
-  /* TODO: [2] ref https://www.w3schools.com/howto/howto_css_bullet_color.asp */
   content: '\2022';
   padding-left: 1rem;
   text-indent: -1rem;
@@ -228,7 +227,6 @@ main {
 }
 
 #scenarios ul li + li {
-  /* TODO: [3] */
   margin-top: 0.5rem;
 }
 
@@ -240,7 +238,6 @@ main {
 }
 
 #freedom p strong {
-  /* TODO [4] */
   color: var(--gray-light-200);
   text-decoration: underline;
 }
