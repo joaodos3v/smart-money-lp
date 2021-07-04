@@ -152,6 +152,11 @@ main {
   border-radius: 0.8rem;
   text-decoration: none;
   padding: 0.2rem 2rem;
+  transition: filter 0.2s;
+}
+
+.button-subscribe:hover {
+  filter: brightness(0.85);
 }
 
 /* Section: Introduction */
